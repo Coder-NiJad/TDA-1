@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishit's Protfolio</title>
+</head>
+
+<body>
+    <header id="site-header">
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro" aria-labelledby="intro-heading">
+            <h1 id="intro-heading">Hello! I'm Nishit Jadiya</h1>
+            <p id="intro-bio">I'm a software engineering student with an aim to build and develop scalabale solutions
+                for all using my technical skills,
+                my preferred tech-stack is MERN stack and I am passionate about working on small to medium scale
+                projects.</p>
+            <p>
+                <strong>Currently:</strong> <span id="intro-current">Open to opportunities / Building Grantly / Student
+                    at
+                    AITR</span>
+            </p>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <p>Grouped list of technical and soft skills.</p>
+            <div id="skills-list" role="list">
+
+                <div role="listitem" data-skill-category="frontend">HTML</div>
+                <div role="listitem" data-skill-category="frontend">CSS</div>
+                <div role="listitem" data-skill-category="frontend">JavaScript / TypeScript</div>
+                <div role="listitem" data-skill-category="backend">Node.js / Express</div>
+                <div role="listitem" data-skill-category="db">MongoDB / Firestore</div>
+                <div role="listitem" data-skill-category="mobile">Flutter</div>
+            </div>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <p>Here's short summaries of notable projects with links and tech stack.</p>
+
+
+            <div id="project-cards">
+                <article class="project" aria-labelledby="project-1-title">
+                    <h3 id="project-1-title">Project One — ToDo App </h3>
+                    <p class="project-summary"> </p>
+                    <ul class="project-meta">An android application to create TODO tasks and secured with Google
+                        Authentication.
+                        <li><strong>Role:</strong> Developer</li>
+                        <li><strong>Tech:</strong> Flutter, Firebase</li>
+                        <li><strong>Link:</strong> <a href="#" target="_blank"
+                                rel="noopener">https://github.com/Coder-NiJad/ToDo</a></li>
+                    </ul>
+                </article>
+
+
+                <article class="project" aria-labelledby="project-2-title">
+                    <h3 id="project-2-title">Project Two — Cravy</h3>
+                    <p class="project-summary">A canteen food ordering app for students to order food from their campus
+                        canteen with a slot system that manages crowding at peak hours in the canteen.</p>
+                    <ul class="project-meta">
+                        <li><strong>Role:</strong> Full-stack</li>
+                        <li><strong>Tech:</strong> Flutter, Firebase</li>
+                        <li><strong>Link:</strong> <a href="#" target="_blank"
+                                rel="noopener">https://github.com/Coder-NiJad/cravy</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <p>If you'd like to work together, drop a message below.</p>
+            <form id="contact-form" action="#" method="post" novalidate>
+
+                <label style="display:none">Leave this field empty
+                    <input type="text" name="hp" id="hp" autocomplete="off" tabindex="-1" />
+                </label>
+
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required aria-required="true" />
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required aria-required="true" />
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+                </div>
+
+                <div>
+                    <label for="consent">
+                        <input type="checkbox" id="consent" name="consent" required />
+                        I agree to be contacted regarding this inquiry.
+                    </label>
+                </div>
+
+                <button type="submit">Send Message</button>
+                <div id="form-feedback" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <p>&copy; <span id="year">2025</span> Nishit Jadiya</p>
+    </footer>
+
+    
+</body>
+
+</html>
