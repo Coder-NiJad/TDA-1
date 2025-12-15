@@ -120,8 +120,38 @@
     <footer id="site-footer">
         <p>&copy; <span id="year">2025</span> Nishit Jadiya</p>
     </footer>
+    
+    <script>
+    // Basic client side form handling. 
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      const feedback = document.getElementById('form-feedback');
 
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const hp = document.getElementById('hp');
+        if (hp && hp.value) { feedback.textContent = 'Spam detected.'; return; }
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const consent = document.getElementById('consent').checked;
+
+        if (!name || !email || !message || !consent) {
+          feedback.textContent = 'Please complete all required fields and accept consent.';
+          return;
+        }
+
+        feedback.textContent = 'Message sent — thanks! (Demo handler)';
+        form.reset();
+      });
+
+      // Update year
+      const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+  </script>
     
 </body>
+
 
 </html>
